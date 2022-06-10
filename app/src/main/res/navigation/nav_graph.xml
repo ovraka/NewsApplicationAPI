@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.indocyber.newsapplicationapi.fragment.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/homeToEverything"
+            app:destination="@id/everythingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/everythingFragment"
+        android:name="com.indocyber.newsapplicationapi.fragment.everything.EverythingFragment"
+        android:label="EverythingFragment" >
+        <argument android:name="source" app:argType="com.indocyber.common.entity.source.Source" app:nullable="false"/>
+        <action
+            android:id="@+id/everythingToDetail"
+            app:destination="@id/everythingDetailFragment"
+            app:enterAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/everythingToHome"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/from_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/everythingDetailFragment"
+        android:name="com.indocyber.newsapplicationapi.fragment.detail.EverythingDetailFragment"
+        android:label="EverythingDetailFragment" >
+        <argument android:name="webView" app:argType="string" app:nullable="false"/>
+    </fragment>
+</navigation>
