@@ -9,3 +9,4 @@ class CategoryUseCase {
         emit(list)
     }
 }
+//typo edit entertaiment -> entertainment
