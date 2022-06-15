@@ -22,7 +22,7 @@ class EverythingFragment : BaseFragment<EverythingViewModel, LayoutEverythingFra
     val loadState = EverythingPagingStateAdapter()
 
     fun selectEverything(url: String) {
-        vm.navigationtEvent.postValue(EverythingFragmentDirections.everythingToDetail(url))
+        vm.navigate(EverythingFragmentDirections.everythingToDetail(url))
     }
 
     val navFragmentArgs: EverythingFragmentArgs by navArgs()
@@ -36,7 +36,7 @@ class EverythingFragment : BaseFragment<EverythingViewModel, LayoutEverythingFra
             }
         }
         binding.textBack.setOnClickListener {
-            vm.navigationtEvent.postValue(EverythingFragmentDirections.everythingToHome())
+            vm.popBackStack()
         }
         binding.search.addTextChangedListener {
             vm.searchText.value = it.toString()

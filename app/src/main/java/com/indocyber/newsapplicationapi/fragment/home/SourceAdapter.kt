@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.indocyber.common.entity.source.Source
+import com.indocyber.common.ext.Constants
 import com.indocyber.common.ext.loadImageFromUrl
 import com.indocyber.newsapplicationapi.databinding.LayoutSourceItemBinding
 
@@ -19,7 +20,7 @@ class SourceAdapter(val selectSource: (Source) -> Unit) : RecyclerView.Adapter<S
             binding.root.setOnClickListener {
                 selectSource(source)
             }
-            binding.sourceImage.loadImageFromUrl("https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url= ${source.url} &size=128")
+            binding.sourceImage.loadImageFromUrl(Constants.getImageFromUrl(source))
         }
     }
 

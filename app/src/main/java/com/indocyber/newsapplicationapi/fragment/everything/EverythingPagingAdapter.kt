@@ -1,6 +1,8 @@
 package com.indocyber.newsapplicationapi.fragment.everything
 
 import android.content.Context
+import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
@@ -16,7 +18,11 @@ class EverythingPagingAdapter(val selectEverything: (String) -> Unit) :
         val binding: LayoutEverythingItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(article: Article?) {
-            article?.let { binding.image.loadImageFromUrl(it.urlToImage) }
+            try {
+                article?.urlToImage?.let { binding.image.loadImageFromUrl(it) }
+            }catch (e:Exception){
+                Log.e("Error",e.message?.let { it }?: "Error Load Image")
+            }
             binding.readMore.setOnClickListener {
                 article?.url?.let { it1 -> selectEverything(it1) }
             }

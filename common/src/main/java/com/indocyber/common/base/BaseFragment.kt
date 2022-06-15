@@ -43,22 +43,6 @@ abstract class BaseFragment<VM : BaseViewModel, Binding : ViewDataBinding> : Fra
         vm.navigationtEvent.observe(this) {
             findNavController().navigate(it)
         }
-        vm.showDialogEvent.observe(this) {
-            AlertDialog.Builder(requireContext()).setTitle(
-                it.title
-            ).setMessage(it.message).apply {
-                it.positiveButton?.let {
-                    setPositiveButton(it.first) { dialog, flag ->
-                        it.second.invoke()
-                    }
-                }
-                it.negativeButton?.let {
-                    setNegativeButton(it.first) { dialog, flag ->
-                        it.second.invoke()
-                    }
-                }
-            }.create().show()
-        }
         vm.popBackStackEvent.observe(this) {
             findNavController().popBackStack()
         }

@@ -17,6 +17,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:background="@drawable/image_news"
+            android:backgroundTint="@color/white"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,11 +31,24 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/category"
+                android:background="@drawable/bg_category"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="15dp"
+                android:text="@{data.category}"
+                android:textSize="10sp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="#737373"/>
+
+            <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@{data.name}"
                 android:textColor="@color/black"

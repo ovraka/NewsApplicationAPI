@@ -22,10 +22,6 @@
             android:id="@+id/everythingToDetail"
             app:destination="@id/everythingDetailFragment"
             app:enterAnim="@android:anim/fade_out" />
-        <action
-            android:id="@+id/everythingToHome"
-            app:destination="@id/homeFragment"
-            app:enterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/everythingDetailFragment"

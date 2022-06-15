@@ -20,11 +20,15 @@ class HomeFragment : BaseFragment<HomeViewModel, LayoutHomeFragmentBinding>() {
     val sourceAdapter = SourceAdapter(::selectSource)
 
     fun selectCategory(category : String) {
-        vm.selectCategory.value = category
+        if (category == vm.selectCategory.value) {
+            vm.selectCategory.value = null
+        }else{
+            vm.selectCategory.value = category
+        }
     }
 
     fun selectSource(source: Source) {
-        vm.navigationtEvent.postValue(HomeFragmentDirections.homeToEverything(source))
+        vm.navigate(HomeFragmentDirections.homeToEverything(source))
     }
 
     override fun initBinding(binding: LayoutHomeFragmentBinding) {
