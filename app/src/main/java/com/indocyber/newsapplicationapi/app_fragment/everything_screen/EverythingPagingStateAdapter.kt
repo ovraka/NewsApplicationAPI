@@ -1,6 +1,5 @@
-package com.indocyber.newsapplicationapi.fragment.everything
+package com.indocyber.newsapplicationapi.app_fragment.everything_screen
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

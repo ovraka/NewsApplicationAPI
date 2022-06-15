@@ -1,4 +1,4 @@
-package com.indocyber.newsapplicationapi.module
+package com.indocyber.newsapplicationapi.hilt_module
 
 import android.app.Application
 import com.indocyber.api_service.RetrofitClient

@@ -1,4 +1,4 @@
-package com.indocyber.newsapplicationapi.fragment.everything
+package com.indocyber.newsapplicationapi.app_fragment.everything_screen
 
 import android.view.View
 import androidx.core.widget.addTextChangedListener
@@ -45,6 +45,7 @@ class EverythingFragment : BaseFragment<EverythingViewModel, LayoutEverythingFra
         adapter.addLoadStateListener {
             if (it.append is LoadState.Error || it.refresh is LoadState.Error) {
                 binding.recycler.visibility = View.GONE
+                binding.loading.visibility = View.GONE
                 binding.retryButton.visibility = View.VISIBLE
                 binding.retryButton.setOnClickListener {
                     vm.getEverything(navFragmentArgs.source)

@@ -1,4 +1,4 @@
-package com.indocyber.newsapplicationapi.fragment.detail
+package com.indocyber.newsapplicationapi.app_fragment.everything_detail
 
 import android.os.Bundle
 import android.view.LayoutInflater

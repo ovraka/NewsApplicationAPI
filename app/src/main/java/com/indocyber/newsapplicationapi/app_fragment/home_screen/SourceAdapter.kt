@@ -1,4 +1,4 @@
-package com.indocyber.newsapplicationapi.fragment.home
+package com.indocyber.newsapplicationapi.app_fragment.home_screen
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

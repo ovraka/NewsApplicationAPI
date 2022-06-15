@@ -1,10 +1,8 @@
-package com.indocyber.newsapplicationapi.fragment.home
+package com.indocyber.newsapplicationapi.app_fragment.home_screen
 
 import android.view.View
 import androidx.core.widget.addTextChangedListener
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.indocyber.common.base.AppResponse
 import com.indocyber.common.base.BaseFragment
 import com.indocyber.common.entity.source.Source
 import com.indocyber.newsapplicationapi.R

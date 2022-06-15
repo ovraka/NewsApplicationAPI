@@ -1,4 +1,4 @@
-package com.indocyber.newsapplicationapi.activity
+package com.indocyber.newsapplicationapi.root_activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

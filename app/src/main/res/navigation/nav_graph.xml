@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.indocyber.newsapplicationapi.fragment.home.HomeFragment"
+        android:name="com.indocyber.newsapplicationapi.app_fragment.home_screen.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/homeToEverything"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/everythingFragment"
-        android:name="com.indocyber.newsapplicationapi.fragment.everything.EverythingFragment"
+        android:name="com.indocyber.newsapplicationapi.app_fragment.everything_screen.EverythingFragment"
         android:label="EverythingFragment" >
         <argument android:name="source" app:argType="com.indocyber.common.entity.source.Source" app:nullable="false"/>
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/everythingDetailFragment"
-        android:name="com.indocyber.newsapplicationapi.fragment.detail.EverythingDetailFragment"
+        android:name="com.indocyber.newsapplicationapi.app_fragment.everything_detail.EverythingDetailFragment"
         android:label="EverythingDetailFragment" >
         <argument android:name="webView" app:argType="string" app:nullable="false"/>
     </fragment>

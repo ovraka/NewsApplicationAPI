@@ -14,7 +14,7 @@
         android:theme="@style/Theme.NewsApplicationAPI" >
 
         <activity
-            android:name=".activity.RootActivity"
+            android:name=".root_activity.RootActivity"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
