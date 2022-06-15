@@ -25,6 +25,7 @@
                 <ProgressBar
                     android:progressTint="@color/primaryLight"
                     android:paddingEnd="10dp"
+                    android:paddingStart="0dp"
                     android:visibility="gone"
                     android:id="@+id/loading"
                     android:layout_gravity="end"
@@ -32,6 +33,7 @@
                     android:layout_height="40dp" />
 
                 <ImageView
+                    android:contentDescription="@string/iconback"
                     android:id="@+id/back"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
@@ -45,7 +47,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/sf_pro_medium"
-                    android:text="Back"
+                    android:text="@string/back"
                     android:textColor="#0E7AFE"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +61,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/sf_pro_medium"
-                    android:text="Articles"
+                    android:text="@string/articles"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +85,7 @@
             app:layout_constraintTop_toBottomOf="@id/appBarLayout">
 
             <ImageView
+                android:contentDescription="@string/searchicon"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="15dp"
@@ -99,7 +102,7 @@
                 android:layout_weight="1"
                 android:background="@null"
                 android:fontFamily="@font/poppins_regular"
-                android:hint="Search"
+                android:hint="@string/search"
                 android:imeOptions="actionSearch"
                 android:importantForAutofill="no"
                 android:inputType="text"
@@ -126,7 +129,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
-            android:text="Retry"
+            android:text="@string/retry"
             android:id="@+id/retryButton"
             android:backgroundTint="@color/primaryLight"
             android:visibility="gone"
